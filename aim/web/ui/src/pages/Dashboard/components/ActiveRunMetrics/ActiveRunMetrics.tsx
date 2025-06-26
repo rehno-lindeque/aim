@@ -54,23 +54,15 @@ function ActiveRunMetrics({
     <ErrorBoundary>
       <div className='ActiveRunMetrics'>
         <BusyLoaderWrapper isLoading={isLoading} height='400px'>
-          {!isLoading && hasNoMetrics ? (
-            <IllustrationBlock
-              size='small'
-              title='No metrics data available for this run'
+          <div className='ActiveRunMetrics__content RunDetail__runDetailContainer__tabPanel'>
+            <RunDetailMetricsAndSystemTab
+              runHash={runHash}
+              runTraces={runData?.runTraces}
+              runBatch={runData?.runMetricsBatch}
+              isRunBatchLoading={runData?.isRunBatchLoading}
+              showPin={false}
             />
-          ) : (
-            <div className='ActiveRunMetrics__content RunDetail__runDetailContainer__tabPanel'>
-              <RunDetailMetricsAndSystemTab
-                runHash={runHash}
-                runTraces={runData?.runTraces}
-                runBatch={runData?.runMetricsBatch}
-                isRunBatchLoading={runData?.isRunBatchLoading}
-                showPin={false}
-                // Add the gridSpecifier prop to match the run details page
-              />
-            </div>
-          )}
+          </div>
         </BusyLoaderWrapper>
       </div>
     </ErrorBoundary>
