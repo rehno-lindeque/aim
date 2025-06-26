@@ -8,7 +8,6 @@ import { Spinner, Text } from 'components/kit';
 import TabPanel from 'components/TabPanel/TabPanel';
 
 import ProjectContributions from './components/ProjectContributions/ProjectContributions';
-import ExploreSection from './components/ExploreSection/ExploreSection';
 import DashboardRight from './components/DashboardRight/DashboardRight';
 import DashboardContributionsFeed from './components/DashboardContributionsFeed';
 import ProjectStatistics from './components/ProjectStatistics';
@@ -50,7 +49,6 @@ function Dashboard(): React.FunctionComponentElement<React.ReactNode> {
   return (
     <ErrorBoundary>
       <section className='Dashboard'>
-        <ExploreSection />
         <div
           className={classnames('Dashboard__middle', {
             'Dashboard__middle--centered': isLoading,
