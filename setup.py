@@ -56,7 +56,7 @@ SETUP_REQUIRED = [
 REQUIRED = [
     f'aim-ui=={__version__}',
     'aimrecords==0.0.7',
-    'aimrocks==0.5.*',
+    'aimrocks==0.5.3.dev8',
     'cachetools>=4.0.0',
     'click>=7.0',
     'cryptography>=3.0',
