@@ -39,7 +39,7 @@ class BaseRun:
         if self.read_only:
             assert run_hash is not None
             self.hash = run_hash
-            self.meta_tree: TreeView = self.repo.request_tree('meta', read_only=True).subtree('meta')
+            self.meta_tree: TreeView = self.repo.request_tree('meta', self.hash, read_only=True).subtree('meta')
         else:
             if run_hash is None:
                 self.hash = generate_run_hash()
